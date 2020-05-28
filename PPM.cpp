@@ -1,11 +1,12 @@
 #include <iostream>
 #include <fstream>
+#include <cmath.h>
 
 using namespace std;
 
 int main() {
     ofstream image;
-    image.open("output.ppm", 'w');
+    image.open("output.ppm", std::fstream::out);
     int nx = 200;
     int ny = 100;
     image << "P3\n" << nx << " " << ny << "\n255\n"; // PPM header, simple format, specifies pixel data as 3 by 255 (RGB)
